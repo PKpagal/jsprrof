@@ -1,0 +1,31 @@
+let nfts = [];
+
+function mintNFT(name, description, image) {
+    const nft = {
+        name: name,
+        description: description,
+        image: image
+    };
+    
+    nfts.push(nft);
+}
+
+function listNFTs() {
+    nfts.forEach(nft => {
+        console.log("Name: " + nft.name);
+        console.log("Description: " + nft.description);
+        console.log("Image: " + nft.image);
+        console.log("---------------------------");
+    });
+}
+
+function getTotalSupply() {
+    return nfts.length;
+}
+
+// Example usage
+mintNFT("NFT1", "This is the first NFT", "image1.png");
+mintNFT("NFT2", "This is the second NFT", "image2.png");
+
+listNFTs(); // Prints the details of all NFTs
+console.log("Total Supply: " + getTotalSupply()); // Prints the total number of NFTs
